@@ -233,6 +233,7 @@ export const makeSelectSearchDownloadUrlsForPage = (query, page = 1) =>
         ? matchingFileInfos.slice(start, end).map(fileInfo =>
           buildURI({
             streamName: fileInfo.claim_name,
+            streamClaimId: fileInfo.claim_id,
             channelName: fileInfo.channel_name,
             channelClaimId: fileInfo.channel_claim_id,
           })
